@@ -24,7 +24,7 @@ export class MatomoInjector {
    */
   constructor(@Inject(PLATFORM_ID) private platformId) {
     if (isPlatformBrowser(this.platformId)) {
-      window._paq = window._paq || [];
+      window._mtm = window._mtm || [];
     } else {
       console.warn('MatomoInjector can\'t be used on server platform');
     }
@@ -34,24 +34,24 @@ export class MatomoInjector {
    * Injects the Matomo tracker in the DOM.
    *
    * @param url URL of the Matomo instance to connect to.
-   * @param id SiteId for this application/site.
-   * @param [scriptUrl] Optional URL for the `piwik.js`/`matomo.js` script in case it is not at its default location.
    */
-  init(url: string, id: number, scriptUrl?: string) {
+  init(url: string, customProperties?: Array<{}>) {
     if (isPlatformBrowser(this.platformId)) {
-      window._paq.push(['trackPageView']);
-      window._paq.push(['enableLinkTracking']);
       (() => {
         const u = url;
-        window._paq.push(['setTrackerUrl', u + 'piwik.php']);
-        window._paq.push(['setSiteId', id.toString()]);
+        window._mtm.push({
+          'mtm.startTime': (new Date().getTime()),
+          event: 'mtm.Start'
+        });
+        if (customProperties) {
+          window._mtm.push(...customProperties);
+        }
         const d = document;
         const g = d.createElement('script');
         const s = d.getElementsByTagName('script')[0];
         g.type = 'text/javascript';
         g.async = true;
-        g.defer = true;
-        g.src = !!scriptUrl ? scriptUrl : u + 'piwik.js';
+        g.src = u;
         s.parentNode.insertBefore(g, s);
       })();
     }
