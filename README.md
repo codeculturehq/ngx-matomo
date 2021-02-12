@@ -18,7 +18,7 @@ This new release of ngx-Matomo has been rebuilt with Angular CLI v8. As a result
 ## Installation
 
 Use `npm` or `yarn` to add the module to your current project:
-```npm install --save ngx-matomo```
+```npm install --save @codeculture/ngx-matomo```
 
 ## Adding Matomo into to your Angular application
 
@@ -52,7 +52,7 @@ To enable Matomo via your root component you can now inject the MatomoInjector i
 
 ```ts
 import { Component } from '@angular/core';
-import { MatomoInjector } from 'ngx-matomo';
+import { MatomoInjector } from '@codeculture/ngx-matomo';
 
 @Component({
   selector: 'app',
