@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngx-matomo": {
+    "@codeculture/ngx-matomo": {
       "projectType": "library",
       "root": "projects/ngx-matomo",
       "sourceRoot": "projects/ngx-matomo/src",
@@ -147,7 +147,7 @@
       }
     }
   },
-  "defaultProject": "ngx-matomo",
+  "defaultProject": "@codeculture/ngx-matomo",
   "cli": {
     "packageManager": "npm"
   }

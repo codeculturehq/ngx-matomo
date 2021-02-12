@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatomoModule } from 'ngx-matomo';
+import { MatomoModule } from '@codeculture/ngx-matomo';
 
 import { AppComponent } from './app.component';
 

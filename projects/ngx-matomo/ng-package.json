@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/ngx-matomo",
+  "dest": "../../dist/codeculture-ngx-matomo",
   "lib": {
     "entryFile": "src/public-api.ts"
   }

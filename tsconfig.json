@@ -14,8 +14,8 @@
     "typeRoots": ["node_modules/@types"],
     "lib": ["es2018", "dom"],
     "paths": {
-      "ngx-matomo": ["dist/ngx-matomo"],
-      "ngx-matomo/*": ["dist/ngx-matomo/*"]
+      "codeculture-ngx-matomo": ["dist/codeculture-ngx-matomo"],
+      "codeculture-ngx-matomo/*": ["dist/codeculture-ngx-matomo/*"]
     }
   },
   "angularCompilerOptions": {
