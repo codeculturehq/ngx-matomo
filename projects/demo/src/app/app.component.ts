@@ -1,5 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { MatomoTracker, MatomoInjector } from 'ngx-matomo';
+import { MatomoTracker, MatomoInjector } from '@codeculture/ngx-matomo';
 
 /**
  * Main component of the demo application.

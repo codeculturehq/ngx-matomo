@@ -1,6 +1,6 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { MatomoModule } from 'ngx-matomo';
+import { MatomoModule } from '@codeculture/ngx-matomo';
 
 describe('Demo App', () => {
   beforeEach(async(() => {
