@@ -38,6 +38,12 @@ export class MatomoInjector {
   init(url: string, customProperties?: Array<{}>) {
     if (isPlatformBrowser(this.platformId)) {
       (() => {
+        const d = document;
+        // check for existing script
+        if (d.getElementById('ngx-matomo') !== null) {
+          return;
+        }
+
         const u = url;
         window._mtm.push({
           'mtm.startTime': (new Date().getTime()),
@@ -46,11 +52,14 @@ export class MatomoInjector {
         if (customProperties) {
           window._mtm.push(...customProperties);
         }
-        const d = document;
+
+
+
         const g = d.createElement('script');
         const s = d.getElementsByTagName('script')[0];
         g.type = 'text/javascript';
         g.async = true;
+        g.id = 'ngx-matomo';
         g.src = u;
         s.parentNode.insertBefore(g, s);
       })();
