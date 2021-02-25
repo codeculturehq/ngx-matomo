@@ -1,6 +1,6 @@
 {
   "name": "@codeculture/ngx-matomo",
-  "version": "0.1.4",
+  "version": "0.2.1",
   "author": "Arnaud Mouronval <arnaud.mouronval@gmail.com>",
   "description": "Matomo (aka. Piwik) web analytics for applications based on Angular 5, 6, 7, 8, 9 & 10.",
   "keywords": [
